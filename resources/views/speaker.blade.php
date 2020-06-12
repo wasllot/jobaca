@@ -1,13 +1,19 @@
 @extends('layouts.main')
 
 @section('content')
-<main id="main" class="main-page">
+<main id="main" >
+<section id="subscribe">
+  <div class="container wow fadeInUp">
+    <div class="section-header">
+      <h2>Newsletter</h2>
+      <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
+    </div>
+
+  </div>
+</section>
+
   <section id="speakers-details" class="wow fadeIn">
     <div class="container">
-      <div class="section-header">
-        <h2>Speaker Details</h2>
-        <p>Praesentium ut qui possimus sapiente nulla.</p>
-      </div>
 
       <div class="row">
         <div class="col-md-6">

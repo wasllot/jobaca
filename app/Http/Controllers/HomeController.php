@@ -12,6 +12,8 @@ use App\Sponsor;
 use App\Faq;
 use App\Price;
 use App\Amenity;
+use App\Subscribe;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -39,5 +41,32 @@ class HomeController extends Controller
         $settings = Setting::pluck('value', 'key');
         
         return view('speaker', compact('settings', 'speaker'));
+    } 
+
+    public function webDetails($id)
+    {
+        $settings = Setting::pluck('value', 'key');
+        $website = Hotel::find($id);
+        return view('website', compact('settings', 'website'));
+    }
+
+    public function subscribe(Request $request){
+
+        $subscribe =  [
+            'email' => json_encode($request->json('email')),
+        ];
+
+       Subscribe::create($subscribe);
+        
+
+        $response = [
+            'status' => 'success',
+            'message' => 'Subscribed',
+            'email' => json_encode($request->json('email'))
+        ];
+
+     return response()->json($response);
+
+
     }
 }

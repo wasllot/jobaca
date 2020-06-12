@@ -2,16 +2,20 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <h2>About The Event</h2>
+        <h2>Acerca de Jobaca</h2>
         <p>{{ $settings['about_description'] ?? '' }}</p>
       </div>
       <div class="col-lg-3">
-        <h3>Where</h3>
-        <p>{!! $settings['about_where'] ?? '' !!}</p>
+        
       </div>
       <div class="col-lg-3">
-        <h3>When</h3>
-        <p>{!! $settings['about_when'] ?? '' !!}</p>
+           <div id="logo" class="pull-left">
+      <h1>
+        <a href="{{ route('home') }}#intro">
+          <span><!-- <i class="fa fa-map-marker" aria-hidden="true"></i> --> <img src="/img/logo-icon.jpg" class="rounded" alt="{{ env('APP_NAME', 'Jobaca') }}" width="121"></span>
+        </a>
+      </h1>
+    </div>
       </div>
     </div>
   </div>

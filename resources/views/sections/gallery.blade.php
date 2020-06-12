@@ -2,8 +2,8 @@
 
   <div class="container">
     <div class="section-header">
-      <h2>Gallery</h2>
-      <p>Check our gallery from the recent events</p>
+      <h2>Diseños</h2>
+      <p>Algunos de los diseños elaborados por Jobaca</p>
     </div>
   </div>
   @foreach($galleries as $gallery)

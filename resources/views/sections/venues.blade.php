@@ -1,8 +1,8 @@
 <section id="venue" class="wow fadeInUp">
     <div class="container-fluid">
       <div class="section-header">
-        <h2>Event Venue</h2>
-        <p>Event venue location info and gallery</p>
+        <h2>Oportunidades</h2>
+        <p>Un poco acerca de Jobaca</p>
       </div>
     </div>
   @foreach($venues as $venue)

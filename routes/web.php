@@ -2,8 +2,15 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('speaker/{speaker}', 'HomeController@view')->name('speaker');
+Route::get('service/{speaker}', 'HomeController@view')->name('service');
+Route::get('web/{id}', 'HomeController@webDetails')->name('web');
 Route::redirect('/home', '/admin');
+Route::post('/subscribe', 'HomeController@subscribe')->name('subscribe');
+// Route::get('/{value}', 'H')
+
 Auth::routes(['register' => false]);
+
+
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');

@@ -2,8 +2,8 @@
 
   <div class="container">
     <div class="section-header">
-      <h2>Hotels</h2>
-      <p>Here are some nearby hotels</p>
+      <h2>Páginas web</h2>
+      <p>Algunas de nuestras páginas web</p>
     </div>
 
     <div class="row">
@@ -13,13 +13,13 @@
             <div class="hotel-img">
               <img src="{{ $hotel->photo->getUrl() }}" alt="{{ $hotel->name }}" class="img-fluid">
             </div>
-            <h3><a href="#">{{ $hotel->name }}</a></h3>
-            <div class="stars">
-              @for($i = 0; $i < $hotel->rating; $i++)
-                <i class="fa fa-star"></i>
-              @endfor
-            </div>
-            <p>{{ $hotel->description }}</p>
+            <h3 class="text-center py-2"><a href="{{ route('web', $hotel->id) }}">{{ $hotel->name }}</a></h3>
+<!--             <div class="stars">
+  @for($i = 0; $i < $hotel->rating; $i++)
+    <i class="fa fa-star"></i>
+  @endfor
+</div>
+<p>{{ $hotel->description }}</p> -->
           </div>
         </div>
       @endforeach
